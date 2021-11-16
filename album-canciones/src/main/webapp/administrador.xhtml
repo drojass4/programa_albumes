@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+       <html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://primefaces.org/ui">
+
+
+
+<head>
+    <title>Ingreso administrador</title>
+</head>
+<body>
+
+     <p>Ingreso administrador</p>
+
+     <p:breadCrumb>
+         <p:menuitem value="index" url="http://localhost:8080/index.xhtml"/>
+     </p:breadCrumb>
+
+     <h3>Ingreso de datos</h3>
+     <p:panelGrid columns="2" layout="flex" >
+         <p:outputLabel for="usuario" value="Usuario" /> <p:inputText id="usuario" />
+         <p> </p>
+         <p:outputLabel for="contraseña" value="Contraseña" /> <p:inputText id="contraseña" />
+     </p:panelGrid>
+      <p> </p>
+
+     <h:form>
+         <p:growl id="growl" life="2000" />
+
+         <p:commandButton value="ingresar" id="ajax" update="growl" action="#{buttonView.buttonAction}" style="margin-right:20px;" styleClass="ui-priority-primary" />
+         <p:commandButton value="salir" action="http://localhost:8080/index.xhtml" style="margin-right:20px;" ajax="false"/>
+     </h:form>
+
+
+</body>
+</html>

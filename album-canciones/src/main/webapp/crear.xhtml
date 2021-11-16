@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+<head>
+    <title>Ingreso  de albumes  y canciones </title>
+</head>
+<body>
+
+     <p>ingreso de albumes  y canciones </p>
+     <p:breadCrumb>
+         <p:menuitem value="index" url="http://localhost:8080/index.xhtml"/>
+         <p:menuitem value="administrador" url="http://localhost:8080/administrador.xhtml"/>
+     </p:breadCrumb>
+
+     <h:form id="form">
+         <div style="padding: 15px;">
+            <div style="padding: 15px;">
+                <p:outputLabel value="nombre del album" style="font-weight: bold;" />
+                <p:inputText value="#{rearvista.user.nombre}" Style="width: 100%" />
+            </div>
+
+             <div style="padding: 15px;">
+                 <p:outputLabel value="año del abum" style="font-weight: bold;" />
+                 <p:inputText value="#{crearvista.user.nombre}" Style="width: 100%" />
+             </div>
+
+             <div style="padding: 15px;">
+                 <p:outputLabel value="cantidad de canciones" style="font-weight: bold;" />
+                 <p:inputText value="#{crearvista.user.nombre}" Style="width: 100%" />
+             </div>
+
+             <div style="padding: 15px;">
+                 <p:outputLabel value="Duracion del album" style="font-weight: bold;" />
+                 <p:inputText value="#{crearvista.user.nombre}" Style="width: 100%" />
+             </div>
+
+             <div style="padding: 15px;">
+                 <p:outputLabel value="Nombre de artista" style="font-weight: bold;" />
+                 <p:inputText value="#{crearvista.user.nombre}" Style="width: 100%" />
+             </div>
+
+             <div style="padding: 15px;">
+                 <p:outputLabel value="Nombre de la cancion " style="font-weight: bold;" />
+                 <p:inputText value="#{crearvista.user.nombre}" Style="width: 100%" />
+             </div>
+
+             <div style="padding: 15px;">
+                 <p:outputLabel value="Productor" style="font-weight: bold;" />
+                 <p:inputText value="#{crearvista.user.nombre}" Style="width: 100%" />
+             </div>
+
+             <div style="padding: 15px;">
+                 <p:outputLabel value="Colaboradores" style="font-weight: bold;" />
+                 <p:inputText value="#{crearvista.user.nombre}" Style="width: 100%" />
+             </div>
+
+             <div style="padding: 15px;">
+                 <p:outputLabel value="Duracion de la cancion " style="font-weight: bold;" />
+                 <p:inputText value="#{crearvista.user.nombre}" Style="width: 100%" />
+             </div>
+
+             <div style="padding: 15px;">
+                 <p:outputLabel value="favorito" style="font-weight: bold;" />
+                 <p:inputText value="#{crearvista.user.nombre}" Style="width: 100%" />
+             </div>
+
+             <div style="padding: 15px;">
+                 <p:outputLabel value="Calificar" style="font-weight: bold;" />
+                 <p:inputText value="#{crearvista.user.nombre}" Style="width: 100%" />
+             </div>
+
+
+         </div>
+
+     </h:form>
+
+
+     <h:form>
+         <p:growl id="growl" life="2000" />
+
+         <p:commandButton value="ingresar" id="ajax" update="growl" action="#{buttonView.buttonAction}" style="margin-right:20px;" styleClass="ui-priority-primary" />
+         <p:commandButton value="salir" action="http://localhost:8080/index.xhtml" style="margin-right:20px;" ajax="false"/>
+     </h:form>
+
+
+</body>
+</html>
