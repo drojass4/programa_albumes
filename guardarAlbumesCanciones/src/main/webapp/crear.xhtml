@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+</h:head>
+<h:body>
+    <p:breadCrumb>
+        <p:menuitem value="index" url="http://localhost:8080/index.xhtml"/>
+        <p:menuitem value="administrador" url="http://localhost:8080/administrador.xhtml"/>
+    </p:breadCrumb>
+
+
+    <h:form id="form">
+        <div style="padding: 15px;">
+
+        <div style="padding: 15px;">
+            <span class="ui-float-label">
+                 <p:inputText id="dato1" value="#{IndexBean}"/>
+                 <p:outputLabel for="@previous" value="Nombre de el album"/>
+            </span>
+        </div>
+        <div style="padding: 15px;">
+            <span class="ui-float-label">
+                 <p:inputText id="dato2" value="#{indexBean.cadena}"/>
+                 <p:outputLabel for="@previous" value="Año del album (digite el año en numero sin punto ni comas)"/>
+            </span>
+        </div>
+
+          <div style="padding: 15px;">
+                <span class="ui-float-label">
+                 <p:inputText id="dato3" value="#{indexBean.cadena}"/>
+                 <p:outputLabel for="@previous" value="Cantidad de canciones (digite la catidad en numeros enteros)"/>
+                </span>
+            </div>
+
+            <div style="padding: 15px;">
+                <span class="ui-float-label">
+                 <p:inputText id="dato4" value="#{indexBean.cadena}"/>
+                 <p:outputLabel for="@previous" value="Duracion del album (digite el tiempo en numero)"/>
+                </span>
+            </div>
+
+            <div style="padding: 15px;">
+                <span class="ui-float-label">
+                 <p:inputText id="dato5" value="#{indexBean.cadena}"/>
+                 <p:outputLabel for="@previous" value="Nombre del artista"/>
+                </span>
+            </div>
+
+            <div style="padding: 15px;">
+                <span class="ui-float-label">
+                 <p:inputText id="dato6" value="#{indexBean.cadena}"/>
+                 <p:outputLabel for="@previous" value="Nombre de la cancion "/>
+                </span>
+            </div>
+
+            <div style="padding: 15px;">
+                <span class="ui-float-label">
+                 <p:inputText id="dato7" value="#{indexBean.cadena}"/>
+                 <p:outputLabel for="@previous" value="Nombre del productor"/>
+                </span>
+            </div>
+
+            <div style="padding: 15px;">
+                <span class="ui-float-label">
+                 <p:inputText id="dato8" value="#{indexBean.cadena}"/>
+                 <p:outputLabel for="@previous" value="nombre de colaboradores ()"/>
+                </span>
+            </div>
+
+            <div style="padding: 15px;">
+                <span class="ui-float-label">
+                 <p:inputText id="dato9" value="#{indexBean.cadena}"/>
+                 <p:outputLabel for="@previous" value="Duracion de la cancion (digite el tiempo en numero entero)"/>
+                </span>
+            </div>
+
+            <div style="padding: 15px;">
+                <span class="ui-float-label">
+                 <p:inputText id="dato10" value="#{indexBean.cadena}"/>
+                 <p:outputLabel for="@previous" value="indique si es favorito"/>
+                </span>
+            </div>
+
+            <div style="padding: 15px;">
+                <span class="ui-float-label">
+                 <p:inputText id="dato11" value="#{indexBean.cadena}"/>
+                 <p:outputLabel for="@previous" value="De una calificacion enttre 1 y 5, donde 1 es no me gusta, 2 es la tolero, 3 es megusta,4 es exelente y 5  es no puedo parar de oirla  "/>
+                </span>
+            </div>
+
+
+        </div>
+
+    </h:form>
+
+
+
+
+
+
+
+</h:body>
+</html>
