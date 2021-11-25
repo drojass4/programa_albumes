@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+>
+
+<h:head>
+    <title>Albumes Canciones </title>
+</h:head>
+<h:body style="background-color: rgba(37,36,64)">
+
+    <div class="ui-g">
+        <div class="ui-g-1" ><p:graphicImage value="imagenes/logo2.png"/></div>
+        <div class="ui-g-10">
+            <h:form>
+                <p:breadCrumb style="font-size:25px; background-color:rgba(232,195,158) ;margin-left: 20px; ">
+                    <p:menuitem value="Inicio" url="index.xhtml" />
+                    <p:menuitem value="Iniciar sesion"  url ="iniciarSesion.xhtml" icon="users"/>
+                </p:breadCrumb>
+                <h1 style="color:darkorange;font-size:25px;margin-left: 360px"> Almacenar albumes y canciones</h1>
+            </h:form>
+        </div>
+        <div class="ui-g-1" ><p:graphicImage value="imagenes/logo2.png"/></div>
+
+    </div>
+
+    <p:contentFlow value="#{indexBean.images}" var="image">
+        <p:graphicImage value="imagenes/index/#{image}" styleClass="content" />
+        <div class="caption">#{image}</div>
+    </p:contentFlow>
+
+    <h:form id="form">
+    <p:growl id="msgs" showDetail="true" skipDetailIfEqualsSummary="true" />
+
+    <h3 style="margin-top:0">informacion</h3>
+    <p:accordionPanel>
+    <p:tab title="objeto">
+        <h:panelGrid columns="2" cellpadding="10">
+            <p:graphicImage value="imagenes/logoadmin.jpg" />
+            <h:outputText
+                    value=" Aqui se puede almacenar la informacion(Nombre de artista, nombre de album, nombre de cancion, año del album, numero de canciones, productor, colaboradores) de albumes y canciones " />
+        </h:panelGrid>
+    </p:tab>
+    </p:accordionPanel>
+    </h:form>
+
+
+
+
+</h:body>
+
+
+
+
+</html>

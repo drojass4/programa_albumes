@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+>
+
+<h:head>
+    <title>Albumes Canciones </title>
+</h:head>
+<h:body style="background-color: rgba(37,36,64)">
+
+    <div class="ui-g">
+        <div class="ui-g-1" ><p:graphicImage value="imagenes/logo2.png"/></div>
+        <div class="ui-g-10">
+            <h:form>
+                <p:menubar style="font-size:25px; background-color:rgba(232,195,158) ;margin-left: 20px; ">
+                    <p:menuitem value="Inicio" url="index.xhtml" icon="pi pi-home"/>
+                    <p:menuitem value="volver"  url ="Cancion.xhtml" icon="pi pi-users"/>
+                </p:menubar>
+                <h1 style="color:darkorange;font-size:25px;margin-left: 360px"> Almacenar albumes y canciones</h1>
+            </h:form>
+        </div>
+        <div class="ui-g-1" ><p:graphicImage value="imagenes/logo2.png"/></div>
+
+        <h:form>
+            <p:dataTable value="#{listaCancionBean.can}" var="cancion" id="listaCancion"
+                         style="text-align: center">
+                <p:column headerText="nombre cancion" style="background-color:rgba(156,217,255,0.53)">
+                    <h:outputText value="#{cancion.nombreCancion}"/>
+                </p:column>
+                <p:column headerText="Productores" style="background-color:rgba(156,217,255,0.53)">
+                    <h:outputText value="#{cancion.productor}"/>
+                </p:column>
+                <p:column headerText="Colaboradores" style="background-color:rgba(156,217,255,0.53)">
+                    <h:outputText value="#{cancion.colaboradores}"/>
+                </p:column>
+                <p:column headerText="¿Favorito?" style="background-color:rgba(156,217,255,0.53)">
+                    <h:outputText value="#{cancion.favorito}"/>
+                </p:column>
+                <p:column headerText="Califique" style="background-color:rgba(156,217,255,0.53)">
+                    <h:outputText value="#{cancion.calificar}"/>
+                </p:column>
+                <p:column headerText="Genero cancion" style="background-color:rgba(156,217,255,0.53)">
+                    <h:outputText value="#{cancion.generoAlbum}"/>
+                </p:column>
+            </p:dataTable>
+            <p:commandButton value="Actualizar"
+                             actionListener="#{listaCancionBean.init}" update="listaCancion"/>
+        </h:form>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+</h:body>
+</html>

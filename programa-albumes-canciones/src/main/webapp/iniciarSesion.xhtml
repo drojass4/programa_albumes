@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+>
+
+<h:head>
+    <title>Albumes Canciones </title>
+</h:head>
+<h:body style="background-color: rgba(37,36,64)">
+
+    <div class="ui-g">
+        <div class="ui-g-1" ><p:graphicImage value="imagenes/logo2.png"/></div>
+        <div class="ui-g-10">
+            <h:form>
+                <p:breadCrumb style="font-size:25px; background-color:rgba(232,195,158) ;margin-left: 20px; ">
+                    <p:menuitem value="index" url="index.xhtml" icon="pi pi-home"/>
+                </p:breadCrumb>
+                <h1 style="color:darkorange;font-size:25px;margin-left: 360px"> Iniciar sesion</h1>
+                <p style="color:darkorange;font-size:25px;margin-left: 360px"> INGRESAR USUARIO Y CONTRASEÑA</p>
+            </h:form>
+        </div>
+        <div class="ui-g-1" ><p:graphicImage value="imagenes/logo2.png"/></div>
+
+    </div>
+    <div class="ui-g-1" style="width: 430px;margin-left: 410px;
+                            border-style:inset; background-color:rgba(232,195,158)">
+        <h2 style="text-align:center;color: darkorange"> Iniciar sesión</h2>
+
+        <h:form>
+            <p:panel id="panel" style="background-color:rgba(232,195,158) ">
+                <h3 style="color: darkorange">Usuario</h3>
+                <div class="ui-g">
+                    <div class="ui-g-1" ><p:graphicImage value="imagenes/usuario.png"/> </div>
+                    <div class="ui-g-10">
+                        <span class="ui-float-label">
+                            <p:inputText id="floatUsuario" value="#{iniciarSesionBean.usuario}"/>
+                            <p:outputLabel for="@previous" value="Usuario"/>
+                        </span>
+                    </div>
+                </div>
+
+                <h3 style="color: darkorange">Contraseña</h3>
+                <div class="ui-g">
+
+                    <div class="ui-g-10">
+                        <span class="ui-float-label">
+                            <p:password id="in" value="#{iniciarSesionBean.contraseña}"/>
+                            <p:outputLabel for="@previous" value="contraseña"/>
+                        </span>
+                    </div>
+                </div>
+                <p:commandButton value="Ingresar" action="#{iniciarSesionBean.iniciarSesion()}"
+                                 style="margin-left:80px" update="panel"/>
+
+                <p:messages id="msgs"/>
+            </p:panel>
+        </h:form>
+    </div>
+
+
+
+
+</h:body>
+
+
+</html>

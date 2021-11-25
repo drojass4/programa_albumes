@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+>
+
+<h:head>
+    <title>Albumes Canciones </title>
+</h:head>
+<h:body style="background-color: rgba(37,36,64)">
+
+    <div class="ui-g">
+        <div class="ui-g-1" ><p:graphicImage value="imagenes/logo2.png"/></div>
+        <div class="ui-g-10">
+            <h:form>
+                <p:menubar style="font-size:25px; background-color:rgba(232,195,158) ;margin-left: 20px; ">
+                    <p:menuitem value="Inicio" url="index.xhtml" icon="pi pi-home"/>
+                    <p:menuitem value="volver"  url ="Albumusuario.xhtml" icon="pi pi-users"/>
+                </p:menubar>
+                <h1 style="color:darkorange;font-size:25px;margin-left: 360px"> Almacenar albumes y canciones</h1>
+            </h:form>
+        </div>
+        <div class="ui-g-1" ><p:graphicImage value="imagenes/logo2.png"/></div>
+
+    </div>
+
+    <h:form>
+        <p:dataTable value="#{listaAlbumesBean.album}" var="album" id="listasAlbumes"
+                     style="text-align: center">
+            <p:column headerText="Id" style="background-color:rgba(155,113,255,0.66)">
+                <h:outputText value="#{album.id}"/>
+            </p:column>
+            <p:column headerText="Nombre_Artista" style="background-color:rgba(155,113,255,0.66)">
+                <h:outputText value="#{album.nombreArtista}"/>
+            </p:column>
+            <p:column headerText="Nombre_Album" style="background-color:rgba(155,113,255,0.66)">
+                <h:outputText value="#{album.nombreAlbum}"/>
+            </p:column>
+            <p:column headerText="Año_album" style="background-color:rgba(155,113,255,0.66)">
+                <h:outputText value="#{album.añoAlbum}"/>
+            </p:column>
+            <p:column headerText="Cantidad_Canciones" style="background-color:rgba(155,113,255,0.66)">
+                <h:outputText value="#{album.cantidadCanciones}"/>
+            </p:column>
+        </p:dataTable>
+        <p:commandButton value="Actualizar"
+                         actionListener="#{listaAlbumesBean.init()}" update="listasAlbumes"/>
+    </h:form>
+
+
+
+
+
+</h:body>
+</html>

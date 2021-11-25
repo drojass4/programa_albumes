@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+>
+
+<h:head>
+    <title>Albumes Canciones </title>
+</h:head>
+<h:body style="background-color: rgba(37,36,64)">
+
+    <div class="ui-g">
+        <div class="ui-g-1" ><p:graphicImage value="imagenes/logo2.png"/></div>
+        <div class="ui-g-10">
+            <h:form>
+                <p:menubar style="font-size:25px; background-color:rgba(232,195,158) ;margin-left: 20px; ">
+                    <p:menuitem value="Inicio" url="index.xhtml" icon="pi pi-home"/>
+                    <p:submenu label="Albumes" >
+                        <p:menuitem value="Lista de Albumes" url="listasAlbumes.xhtml"/>
+                    </p:submenu>
+                    <p:submenu label="Canciones" >
+                        <p:menuitem value="Canciones" icon="ui-icon-script" url="Cancion.xhtml"/>
+                        <p:menuitem value="Listas de Cancion" icon="ui-icon-script" url="listaCancion.xhtml"/>
+                    </p:submenu>
+
+                </p:menubar>
+                <h1 style="color:darkorange;font-size:25px;margin-left: 360px"> INGRESAR      ALBUM</h1>
+            </h:form>
+        </div>
+        <div class="ui-g-1" ><p:graphicImage value="imagenes/logo2.png"/></div>
+
+    </div>
+
+
+    <div class="ui-g-1" style="width: 430px;margin-left: 410px;
+                            border-style:inset; background-color:rgba(100,100,0,50)">
+        <h2 style="text-align:center; color:black"> Crear Album</h2>
+        <h:form>
+            <p:panel id="panel" style="background-color:rgba(232,195,158);text-align: center">
+                <p:messages id="msges"/>
+                <h:panelGrid columns="2">
+                    <p:outputLabel for="txtId" value="Identificación:" style="color: black"/>
+                    <p:inputText id="id" value="#{albumBean.id}" label="Identificacion "/>
+                    <p:outputLabel for="txtId" value="Nombre de artista:" style="color: black"/>
+                    <p:inputText id="artis" value="#{albumBean.nombreArtista}" label="Nombre artista "/>
+                    <p:outputLabel for="txtId" value="Nombre de Album:" style="color: black"/>
+                    <p:inputText id="albu" value="#{albumBean.nombreAlbum}" label="Nombre Album "/>
+                    <p:outputLabel for="txtId" value="Año de album:" style="color: black"/>
+                    <p:inputText id="Añoam" value="#{albumBean.añoAlbum}" label="Año album "/>
+                    <p:outputLabel for="txtId" value="Duracion del albumalbum:" style="color: black"/>
+                    <p:inputText id="d" value="#{albumBean.duracionAlbum}" label="Duracion album "/>
+                    <p:outputLabel for="txtId" value="Cantidad de canciones:" style="color: black"/>
+                    <p:inputText id="txtId" value="#{albumBean.cantidadCanciones}" label="Cantidad canciones "/>
+
+                   </h:panelGrid>
+                <p:commandButton value="Guardar" update="panel" style="margin-right:20px"
+                                 action="#{albumBean.guardarAlbumCancion()}"/>
+            </p:panel>
+
+        </h:form>
+    </div>
+
+
+
+
+
+
+</h:body>
+</html>
+
+
+

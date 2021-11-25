@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+>
+
+<h:head>
+    <title>Albumes Canciones </title>
+</h:head>
+<h:body style="background-color: rgba(37,36,64)">
+
+    <div class="ui-g">
+        <div class="ui-g-1" ><p:graphicImage value="imagenes/logo2.png"/></div>
+        <div class="ui-g-10">
+            <h:form>
+                <p:menubar style="font-size:25px; background-color:rgba(232,195,158) ;margin-left: 20px; ">
+                    <p:menuitem value="Inicio" url="index.xhtml" icon="pi pi-home"/>
+                    <p:submenu label="Albumes" >
+                        <p:menuitem value="Lista de Albumes" url="listasAlbumes.xhtml"/>
+                    </p:submenu>
+                    <p:submenu label="Canciones" >
+                        <p:menuitem value="Listas de Cancion" icon="ui-icon-script" url="listaCancion.xhtml"/>
+                    </p:submenu>
+                    <p:menuitem value="salir" url="iniciarSesion.xhtml" icon="pi pi-home"/>
+
+                </p:menubar>
+                <h1 style="color:darkorange;font-size:25px;margin-left: 360px"> Ingresar canciones</h1>
+            </h:form>
+        </div>
+        <div class="ui-g-1" ><p:graphicImage value="imagenes/logo2.png"/></div>
+
+    </div>
+    <div class="ui-g-1" style="width: 430px;margin-left: 410px;
+                            border-style:inset; background-color:rgba(100,100,0,50)">
+        <h2 style="text-align:center"> Guardar Cancion</h2>
+
+        <h:form>
+            <p:panel id="panel" style="background-color:rgba(232,195,158);text-align: center">
+                <p:messages id="msges"/>
+                <h:panelGrid columns="2">
+                    <p:outputLabel for="nombreCancion" value="Nombre de cancion" style="color: black"/>
+                    <p:inputText id="nombreCancion" value="#{cancionBean.nombreCancion}" label="nombre de cancion "/>
+
+                    <p:outputLabel for="productor" value="Productor" style="color: black"/>
+                    <p:inputText id="productor" value="#{cancionBean.productor}" label="Productor "/>
+
+                    <p:outputLabel for="colaboradores" value="Colaboradores" style="color: black"/>
+                    <p:inputText id="colaboradores" value="#{cancionBean.colaboradores}" label="colaboradores "/>
+
+                    <p:outputLabel for="duracionCancion" value="Duracion Cancion:" style="color: black"/>
+                    <p:inputText id="duracionCancion" value="#{cancionBean.duracionCancion}" label="duracion Cancion "/>
+
+                    <p:outputLabel for="favorito" value="Favorito" style="color: black"/>
+                    <p:inputText id="favorito" value="#{cancionBean.favorito}" label="favorito "/>
+
+                    <p:outputLabel for="calificar" value="Calificar" style="color: black"/>
+                    <p:inputText id="calificar" value="#{cancionBean.calificar}" label="calificar "/>
+
+                    <p:outputLabel for="generoalbum" value="Genero album" style="color: black"/>
+                    <p:inputText id="generoalbum" value="#{cancionBean.generoAlbum}" label="genero album "/>
+
+                </h:panelGrid>
+                <p:commandButton value="Guardar" update="panel" style="margin-right:20px"
+                                 action="#{cancionBean.agregarCancion}"/>
+            </p:panel>
+        </h:form>
+    </div>
+
+
+
+
+</h:body>
+</html>
