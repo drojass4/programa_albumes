@@ -2,11 +2,13 @@ package logica;
 
 import modelo.Cancion;
 import persistencia.CancionDao;
+import persistencia.UsuarioDao;
 
 import java.util.ArrayList;
 
 public class CancionCtrl {
     private ArrayList<Cancion> listaCancion;
+    private UsuarioDao CancionDao;
 
     public CancionCtrl() {
 
